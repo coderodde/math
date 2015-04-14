@@ -56,7 +56,7 @@ Next we need to consider the actual vector field $\F$ and the flux it generates 
 		   &= \iint_A \langle \F - \drt, \N \rangle \Bigg| \dru \times \drv \Bigg| \ddu \ddv \\ 
 		   &= \iint_A \Bigg\langle \F - \drt, \dru \times \drv \cdot \Bigg| \dru \times \drv \Bigg|^{-1} \Bigg\rangle \Bigg| \dru \times \drv \Bigg| \ddu \ddv \\ 
 		   &= \iint_A \Bigg\langle \F - \drt, \dru \times \drv \Bigg\rangle \ddu \ddv \\
-		   &= \iint_A \Bigg\langle F(r(u, v, t), t), \dru \times \drv \Bigg\rangle \ddu \ddv,
+		   &= \iint_A \Bigg\langle \F(r(u, v, t), t) - \drt, \dru \times \drv \Bigg\rangle \ddu \ddv,
 \end{align*}
 since
 \[
@@ -102,7 +102,7 @@ Suppose $\F(x, y, z, t) = (0, 0, t)$ and $\surf(u, v, t) = (u, v, 2t)$, $A = \le
 \end{align*}
 Now $\F(r(u, v, t), t) = (0, 0, t)$, $\drt = (0, 0, 2)$ and $\dru \times \drv = (0, 0, 1)$, so
 \begin{align*}
-\Phi(t) &= \iint_{\mathscr{S}} \langle \N, \F - \drt \rangle \dS \\
+\Phi(t) &= \iint_{\mathscr{S}} \langle \F - \drt, \N \rangle \dS \\
           &= \iint_A \langle \F(r(u,v,t), t) - \drt, \dru \times \drv \rangle \ddu \ddv \\
           &= \iint_A \langle (0, 0, t) - (0, 0, 2), (0, 0, 1) \rangle \ddu \ddv \\
           &= \iint_A \langle (0, 0, t  - 2), (0, 0, 1) \rangle \ddu \ddv \\
