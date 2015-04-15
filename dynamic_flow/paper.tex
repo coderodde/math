@@ -64,7 +64,7 @@ since
 \]
 In order to find out the actual amount of fluid going through a moving surface $\mathscr{S}$, we integrate $\Phi(t)$ over a desired time range $\left[ t_a, t_b \right]$:
 \begin{align*}
-\FF = \int_{t_a}^{t_b} \Phi(t) \ddt.
+V = \int_{t_a}^{t_b} \Phi(t) \ddt.
 \end{align*}
 
 \section*{Example}
@@ -117,9 +117,9 @@ Observe that at $t = 0$, the flux is negative ($-2$), since at that moment $\F$ 
 
 Now the amount of fluid flowing across the surface $\mathscr{S}$ during time interval $\left[  0, 10 \right]$ is
 \begin{align*}
-\FF &= \int_0^{10} t - 2 \ddt  \\
-      &= \Big[ \frac{1}{2} t^2 - 2t \Big]_{t = 0}^{t = 10} \\
-      &= 30.
+V &= \int_0^{10} t - 2 \ddt  \\
+   &= \Big[ \frac{1}{2} t^2 - 2t \Big]_{t = 0}^{t = 10} \\
+   &= 30.
 \end{align*} 
 If we aim to calculate the amount of particles going through $\mathscr{S}$ in \textbf{any} direction, we should have substituted $t - 2$ with $|t - 2|$ in the equation above, which would have produced 34.
 \end{document}
