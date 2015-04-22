@@ -41,11 +41,11 @@
 \begin{document}
  \maketitle
 
-\noindent Suppose we are given a vector field $\F(x, y, z, t), \, \F \colon \R^4 \to \R^3$ describing the motion of fluid at any particular time $t$, and a parametric surface $\mathscr{S}$ parametrized by $\surf (u, v, t), \surf \colon A \times \R \to \R^3$, that, just like the vector field, evolves with time. The question we want to answer is how to compute the amount of fluid going across the moving surface within a particular time range. First of all we need to define a normal unit vector to the surface $\surf$:
+\noindent Suppose we are given a vector field $\F(x, y, z, t), \, \F \colon \R^4 \to \R^3$, describing the motion of fluid at any particular time $t$, and a parametric surface $\mathscr{S}$ parametrized by $\surf (u, v, t), \surf \colon A \times \R \to \R^3$, that, just like the vector field, evolves with time. The question we want to answer is how to compute the amount of fluid going across the moving surface within a particular time range. First of all we need to define a normal unit vector to the surface $\mathscr{S}$:
 \[
 \N = \dru \times \drv \cdot \Bigg| \dru \times \drv \Bigg|^{-1}.
 \]
-Taking motion into account, we have that the surface element at time point $t$ passes the space at rate 
+Taking motion into account, we have that the surface element at time $t$ passes the space at rate 
 \[
 \Big\langle \N , \drt \Big\rangle.
 \]
