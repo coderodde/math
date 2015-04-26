@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+
+\newcommand{\dd}{\mathrm{d}}
+
+\author{Rodion ``rodde'' Efremov}
+\title{Till infinity and beyond!}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In this paper, we will consider a space ship approaching the speed of light.
+\end{abstract}
+
+\section{Introduction}
+Suppose we are given a space ship. While stationary, its mass is $m_0$ and its power output is $P_0$. At $t = 0$, the ship takes off and starts accelerating. We want to calculate the speed function $v(t)$, taking time dilation and relativistic mass into account. Whenever the speed of the ship is $v(t)$, its relativistic mass is 
+\[
+m(t) = \frac{m_0}{\sqrt{1 - \frac{v^2(t)}{c^2}}},
+\] 
+and, due to time dilation, its power output is
+\[
+P(t) = \frac{P_0}{\frac{1}{\sqrt{1 - \frac{v^2(t)}{c^2}}}} = P_0 \sqrt{1 - \frac{v^2(t)}{c^2}}.
+\]
+Since 
+\[
+P = \frac{W}{t} = \frac{Fs}{t} = Fv = mav,
+\]
+we have that
+\[
+P(t) = m(t) \frac{\mathrm{d}v(t)}{\mathrm{d}t}v(t).
+\]
+Now, 
+\[
+P_0 \sqrt{1 - \frac{v^2(t)}{c^2}} = \frac{m_0}{\sqrt{1 - \frac{v^2(t)}{c^2}}}\frac{\mathrm{d}v(t)}{\mathrm{d}t}v(t),
+\]
+which leads to 
+\begin{align*}
+\frac{\dd v(t)}{\dd t} &= \frac{P_0}{m_0} \frac{1 - \frac{v^2(t)}{c^2}}{v(t)} \\
+								 &= \frac{P_0}{m_0} \Bigg( \frac{1}{v(t)} - \frac{v(t)}{c^2} \Bigg).
+\end{align*}
+Rewriting to conventional notation for differential equations, we obtain
+\[
+y(t)' = \frac{P_0}{m_0}\Bigg(\frac{1}{y(t)} - \frac{y(t)}{c^2} \Bigg).
+\]
+The solution is
+\[
+v(t) = y(t) = \sqrt{c^2 - e^{C - 2P_0t / c^2m_0}},
+\]
+where $C$ is the integration constant. Since $v(0) = 0$, we must have
+\[
+\sqrt{c^2 - e^{C - 2P_0 \cdot 0 / c^2m_0}} = \sqrt{c^2 - e^C} = 0,
+\]
+which leads to
+\begin{align*}
+e^C &= c^2 \\
+\ln e^C &= \ln c^2 \\
+C &= 2 \ln c. \\
+\end{align*}
+Finally,
+\begin{align*}
+v(t) &= \sqrt{c^2 - e^{2\ln c - \frac{2P_0t}{ c^2m_0 }}} \\
+      &= \sqrt{c^2 - c^2 e^{-\frac{2P_0 t }{ c^2 m_0 }}} \\
+      &= c \sqrt{1 - e^{-\frac{2P_0 t} { c^2 m_0 }}}.
+\end{align*}
+Above, we have
+\[
+v^2(t) = c^2\Bigg( 1 - e^{-\frac{2P_0 t}{c^2 m_0}} \Bigg),
+\]
+\[
+\frac{v^2(t)}{c^2} = 1 - e^{-\frac{2P_0 t}{c^2 m_0}}, 
+\]
+\begin{equation}
+e^{-\frac{2P_0 t}{c^2 m_0}} = 1 - \frac{v^2(t)}{c^2}.
+\end{equation}
+Also,
+\begin{align*}
+\frac{\dd v(t)}{\dd t} &= c\frac{1}{2} \Bigg( 1 - e^{-\frac{2P_0 t}{c^2 m_0}}\Bigg)^{-\frac{1}{2}} \frac{\dd}{\dd t}\Bigg( 1 - e^{-\frac{2P_0 t}{c^2 m_0}}\Bigg) \\
+							  &= \frac{c}{2} \Bigg( 1 - e^{-\frac{2P_0 t}{c^2 m_0}}\Bigg)^{-\frac{1}{2}} \Bigg( -e^{-\frac{2P_0 t}{c^2 m_0}} \Bigg) \Bigg( -\frac{2P_0}{c^2 m_0} \Bigg) \\
+							  &= \frac{c}{2} \frac{2P_0 e^{-\frac{2P_0 t}{c^2 m_0}}}{c^2 m_0\sqrt{1 - e^{-\frac{2P_0 t}{c^2 m_0}}}} \\
+							  &= \frac{P_0e^{-\frac{2P_0 t}{c^2 m_0}}}{cm_0\sqrt{1 - e^{-\frac{2	P_0t}{c^2 m_0}}}},
+\end{align*}
+so 
+\begin{align*}
+m(t)v(t) \frac{\dd v(t)}{\dd t} &= \frac{m_0}{\sqrt{1 - \frac{v^2(t)}{c^2}}} c \sqrt{1 - e^{- \frac{2P_0 t}{c^2 m_0}}} \frac{P_0 e^{-\frac{2P_0 t}{c^2 m_0}}}{cm_0 \sqrt{1 - e^{- \frac{2P_0 t}{c^2 m_0}}}} \\
+										     &= \frac{P_0e^{-\frac{2P_0t}{c^2m_0}}}{\sqrt{1 - \frac{v^2(t)}{c^2}}} \\
+										     &\overset{(1)}{=} \frac{P_0\Bigg( 1 - \frac{v^2(t)}{c^2} \Bigg)}{\sqrt{1 - \frac{v^2(t)}{c^2}}} \\
+										     &= P_0 \sqrt{1 - \frac{v^2(t)}{c^2}} \\
+										     &= P(t),
+\end{align*}
+as expected.
+\end{document}
